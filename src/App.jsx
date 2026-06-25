@@ -993,5 +993,3 @@ export default function VibeCheck() {
     </div>
   );
 }
-
-              
