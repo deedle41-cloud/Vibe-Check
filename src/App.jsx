@@ -355,7 +355,7 @@ function HistoryScreen({ pairId, onBack }) {
     <div style={{minHeight:"100vh",background:C.bg,padding:"80px 20px 32px",fontFamily:"-apple-system,'Inter',sans-serif"}}>
       <div style={{maxWidth:440,margin:"0 auto"}}>
         <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:24}}>
-          <button onClick={()=>{SFX.tap();onBack();}} onTouchEnd={e=>{e.preventDefault();SFX.tap();onBack();}}
+          <button onClick={()=>{onBack();}} onTouchEnd={e=>{e.preventDefault();onBack();}}
             style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:50,minWidth:44,height:44,color:C.muted,fontSize:20,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",WebkitAppearance:"none",touchAction:"manipulation"}}>←</button>
           <div>
             <div style={{fontSize:11,color:C.pink,textTransform:"uppercase",letterSpacing:2,fontWeight:800}}>Your Story</div>
@@ -397,7 +397,7 @@ function GameShell({ title, emoji, color=C.pink, onBack, children }) {
     <div style={{minHeight:"100vh",background:C.bg,padding:"80px 20px 32px",fontFamily:"-apple-system,'Inter',sans-serif"}}>
       <div style={{maxWidth:440,margin:"0 auto"}}>
         <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:24}}>
-          <button onClick={()=>{SFX.tap();onBack();}} onTouchEnd={e=>{e.preventDefault();SFX.tap();onBack();}}
+          <button onClick={()=>{onBack();}} onTouchEnd={e=>{e.preventDefault();onBack();}}
             style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:50,minWidth:44,height:44,color:C.muted,fontSize:20,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",WebkitAppearance:"none",touchAction:"manipulation"}}>←</button>
           <div>
             <div style={{fontSize:11,color:color,textTransform:"uppercase",letterSpacing:2,fontWeight:800}}>Game</div>
@@ -796,7 +796,7 @@ export default function VibeCheck() {
         {screen==="games"&&(
           <div style={{animation:"slideUp 0.4s ease both",width:"100%"}}>
             <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:20}}>
-              <button onClick={()=>{SFX.tap();setScreen("home");}} onTouchEnd={e=>{e.preventDefault();SFX.tap();setScreen("home");}}
+              <button onClick={()=>{setScreen("home");}} onTouchEnd={e=>{e.preventDefault();setScreen("home");}}
                 style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:50,minWidth:44,height:44,color:C.muted,fontSize:20,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",WebkitAppearance:"none",touchAction:"manipulation"}}>←</button>
               <div>
                 <div style={{fontSize:11,color:C.cyan,textTransform:"uppercase",letterSpacing:2,fontWeight:800}}>Play Together</div>
